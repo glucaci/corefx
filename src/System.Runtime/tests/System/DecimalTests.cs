@@ -924,7 +924,7 @@ namespace System.Tests
 
         [Theory]
         [InlineData(MidpointRounding.ToEven - 1)]
-        [InlineData(MidpointRounding.AwayFromZero + 1)]
+        [InlineData(MidpointRounding.ToPositiveInfinity + 1)]
         public void Round_InvalidMidpointRounding_ThrowsArgumentException(MidpointRounding mode)
         {
             AssertExtensions.Throws<ArgumentException>("mode", () => decimal.Round(1, 2, mode));
